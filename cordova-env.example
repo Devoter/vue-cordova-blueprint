@@ -1,0 +1,16 @@
+#!/bin/bash
+
+STUDIO=/home/`whoami`/opt/android-studio
+SDK=/home/`whoami`/opt/Android/Sdk
+GRADLE=$STUDIO/gradle/gradle-4.4
+
+export ANDROID_HOME=$SDK
+export PATH=$PATH:$SDK/bin:$SDK/tools:$SDK/platform-tools:$SDK/platforms:$STUDIO/plugins/android/lib/templates/gradle/wrapper:$GRADLE:$GRADLE/bin:$GRADLE/lib:$GRADLE/inid.d:$GRADLE/media
+
+# sign
+export KEYSTORE=/home/`whoami`/workspace/mykeystore.keystore
+export OUTPUTS=cordova/platforms/android/app/build/outputs/apk/release
+export ZIPALIGN=$SDK/build-tools/30.0.3/zipalign
+export RESULT=VueCordovaBlueprint.apk
+export SIGNER=keystoreowner
+export PASSPHRASE=12345678

@@ -1,0 +1,65 @@
+{
+  "name": "vue-cordova-blueprint",
+  "displayName": "VueCordovaBlueprint",
+  "description": "A blueprint for vue projects with cordova integrations",
+  "apkName": "com.github.devotervuecordovablueprint",
+  "license": "MIT",
+  "version": "0.1.0",
+  "private": true,
+  "author": {
+    "email": "nayretech@gmail.com",
+    "name": "Devoter",
+    "url": "https://github.com/Devoter"
+  },
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "build:dev": "NODE_ENV=development vue-cli-service build --mode=development",
+    "cordova:build": "bash -c 'source cordova-env && TARGET_APP_PLATFORM=cordova vue-cli-service build && cd cordova && cordova build'",
+    "sign": "./sign.sh",
+    "cordova:build:dev": "bash -c 'source cordova-env && TARGET_APP_PLATFORM=cordova NODE_ENV=development vue-cli-service build --mode=development && cd cordova && cordova build'",
+    "cordova:build:android": "bash -c 'source cordova-env && TARGET_APP_PLATFORM=cordova vue-cli-service build && cd cordova && cordova build --platform=android --environment=production --release'",
+    "cordova:run:android": "bash -c 'source cordova-env && cd cordova && cordova run android'",
+    "cordova:debug:android": "bash -c 'source cordova-env && npm run cordova:build:dev && npm run cordova:run:android'",
+    "cordova:init:android": "cd cordova && npm i && cordova platform add android && cordova prepare",
+    "init:blueprint": "node --experimental-json-modules --no-warnings init-blueprint.mjs",
+    "lint": "vue-cli-service lint"
+  },
+  "dependencies": {
+    "@mdi/font": "^5.9.55",
+    "@vue/composition-api": "*",
+    "roboto-fontface": "^0.10.0",
+    "vue": "^2.6.11",
+    "vue-router": "^3.2.0",
+    "vuetify": "^2.5.1"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^4.20.0",
+    "@typescript-eslint/parser": "^4.20.0",
+    "@vue/cli-plugin-babel": "~4.5.0",
+    "@vue/cli-plugin-eslint": "~4.5.0",
+    "@vue/cli-plugin-router": "~4.5.0",
+    "@vue/cli-plugin-typescript": "^4.5.12",
+    "@vue/cli-service": "~4.5.0",
+    "@vue/eslint-config-prettier": "^6.0.0",
+    "@vue/eslint-config-typescript": "^7.0.0",
+    "axios": "^0.21.1",
+    "cordova": "^10.0.0",
+    "eslint": "^6.7.2",
+    "eslint-plugin-prettier": "^3.3.1",
+    "eslint-plugin-vue": "^6.2.2",
+    "eslint-plugin-vuetify": "^1.0.0-beta.8",
+    "husky": "^6.0.0",
+    "lint-staged": "^10.5.4",
+    "prettier": "^2.2.1",
+    "sass": "^1.32.0",
+    "sass-loader": "^10.0.0",
+    "typescript": "^4.2.3",
+    "vue-cli-plugin-vuetify": "~2.3.1",
+    "vue-template-compiler": "^2.6.11",
+    "vuetify-loader": "^1.7.2"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}
