@@ -54,6 +54,12 @@ try {
   exit(1);
 }
 
+try {
+  fs.mkdirSync('./cordova/www');
+} catch (e) {
+  // ignore if exists
+}
+
 console.log(
   'The blueprint initialization has been complete.\nRun`npm run cordova:init:android` to initialize an Android plaform.'
 );
