@@ -4,7 +4,7 @@ A blueprint for Vue projects with cordova integrations. This blueprint contains 
 
 ## Installation
 
-1. Clone the repo: `github.com/Devoter/vue-cordova-blueprint`
+1. Clone the repo: `git clone git@github.com:Devoter/vue-cordova-blueprint.git`
 2. Rename the directory and change dir: `mv vue-cordova-blueprint my-project && cd my-project`
 3. Change the origin repo: `git remote set-url origin <my-project-origin-repo-url>`
 4. Install dependencies: `npm ci`
