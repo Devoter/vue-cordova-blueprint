@@ -38,7 +38,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, computed, ref, provide } from '@vue/composition-api';
+import { defineComponent, computed, ref, provide } from 'vue';
 
 import { COPY_YEAR, VERSION, AUTHOR_NAME } from '@/constants';
 

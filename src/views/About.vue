@@ -10,7 +10,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, inject, Ref } from '@vue/composition-api';
+import { defineComponent, inject, Ref } from 'vue';
 
 import { COPY_YEAR, VERSION } from '@/constants';
 

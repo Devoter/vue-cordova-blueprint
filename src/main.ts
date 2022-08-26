@@ -1,6 +1,5 @@
 import Vue from 'vue';
 import axios from 'axios';
-import VueCompositionAPI from '@vue/composition-api';
 import App from './App.vue';
 import router from './router';
 import vuetify from './plugins/vuetify';
@@ -12,7 +11,6 @@ if (MOBILE_APP) {
 }
 
 Vue.config.productionTip = false;
-Vue.use(VueCompositionAPI);
 
 axios.defaults.baseURL = API_ROOT;
 

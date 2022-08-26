@@ -11,7 +11,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, inject, Ref } from '@vue/composition-api';
+import { defineComponent, inject, Ref } from 'vue';
 
 function setup() {
   const title = inject<Ref<string>>('title')!;
